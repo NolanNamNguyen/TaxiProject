@@ -1,0 +1,43 @@
+{
+    "login": {
+        "welcome": "ようこそ",
+        "email": "Eメール",
+        "username": "ユーザー名",
+        "password": "パスワード",
+        "plsInputUser": "ユーザー名を入力してください",
+        "plsInputPassword": "パスワードを入力してください",
+        "signUp": "アカウントをお持ちでない場合はサインアップしてください",
+        "loginbutton": "ログインする"
+    },
+    "register": {
+        "welcome": "ようこそ",
+        "register": "登録",
+        "confirmPassword": "パスワードを認証する",
+        "email": "Eメール",
+        "selectRole": "役割を選択",
+        "name": "名前",
+        "phone": "電話",
+        "customer":"お客様",
+        "driver":"運転者",
+        "address":"住所",
+        "password": "パスワード",
+        "plsInputUser": "ユーザー名を入力してください",
+        "plsInputPassword": "パスワードを入力してください",
+        "signUp": "アカウントをお持ちでない場合はサインアップしてください",
+        "loginbutton": "ログインする"
+    },
+    "customerModule":{
+        "welcome": "ようこそお客様",
+        "profile": "プロフィール",
+        "search": "予約を検索",
+        "order": "私の注文",
+        "username": "ユーザー名",
+        "orderId": "注文ID",
+        "startProvince": "州を開始",
+        "destinationProvince": "目的地",
+        "driverName": "ドライバー名",
+        "rate": "割合",
+        "date": "日付",
+        "price": "価格"
+    }
+}

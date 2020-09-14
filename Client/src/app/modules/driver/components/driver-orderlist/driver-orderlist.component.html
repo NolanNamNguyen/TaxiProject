@@ -1,0 +1,35 @@
+<div class="big_cintainer">
+  <div *ngFor="let order of myOrderList" class="scheduleResult_container">
+    <div class="locationInformation_container">
+      <div class="startLocation locateInfo">
+        <h3>
+          Start Province: {{order.pickUpLocation}}
+        </h3>
+        <h3>
+          Destination Province: {{order.returnLocation}}
+        </h3>
+      </div>
+      <div class="destinationLocation locateInfo">
+        <h3>
+          Price: {{order.price}}
+        </h3>
+        <h3>
+          Start Time: {{order.created | date: 'dd/MM/yyy, hh:mm'}}
+        </h3>
+      </div>
+    </div>
+    <div class="driverInfo_container">
+      <h2>Customer Information</h2>
+      <div class="scheduleAva_container">
+        <img [src]="order.customerImg ? order.customerImg: '../../../../../assets/Images/profile.jpg'">
+      </div>
+      <h3 class="driverName">{{order.customerName}}</h3>
+      <h3 class="driverName">{{order.customerPhone}}</h3>
+    </div>
+    <div class="orderAction_container">
+      <button (click)="completeOrder(order.orderId)" class="orderScheduleButton">
+        <i class="fas fa-check"></i>
+      </button>
+    </div>
+  </div>
+</div>

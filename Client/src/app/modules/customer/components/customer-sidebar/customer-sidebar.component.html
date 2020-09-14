@@ -1,0 +1,13 @@
+<div class="sideBar_container">
+    <div class="sideBar_overlay"></div>
+    <app-app-logo [taxiColor]="'black'" class="sideBar_logo"></app-app-logo>
+    <h1 class="welcomeTitle">{{'customerModule.welcome' | translate}}<br> {{userName}}</h1>
+    <ul class="sideBar_nav">
+        <li routerLinkActive="active" *ngFor="let menuItem of customerRoute" routerLink="./{{menuItem.path}}" class="{{menuItem.class}} nav-item">
+            <a class="nav-link" >
+                <i class="material-icons">{{menuItem.icon}}</i>
+                <p>{{menuItem.title | translate}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

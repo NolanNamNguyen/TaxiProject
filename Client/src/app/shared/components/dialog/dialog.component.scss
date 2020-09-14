@@ -1,0 +1,114 @@
+
+.deleteingDialog h1 {
+  font-size: 20px;
+}
+.deleteingDialog button {
+  width: 20%;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  padding: 8px 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(99, 98, 98);
+}
+.confirmYes {
+  background-color: #f44336 !important;
+}
+.button_Container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.reviewRate_Container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.driverAvatar{
+  border-radius: 50%;
+  overflow: hidden;
+  width: 110px;
+  height: 110px;
+}
+.driverAvatar img{
+  width: 100%;
+}
+.driverName{
+  font-size: 16px;
+  margin-top: 5px;
+}
+.star-ratings {
+  width: 124px;
+  align-self: center;
+  unicode-bidi: bidi-override;
+  color: #ccc;
+  font-size: 64px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  .fill-ratings {
+    width: 0%;
+    color: #e7711b;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    font-size: 30px;
+
+    // Allows us to grab the width of the span elements
+    span {
+      display: inline-block;
+    }
+  }
+  .empty-ratings {
+    width: 100%;
+    display: block;
+    z-index: 0;
+    font-size: 30px;
+  }
+}
+.rating_Container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rateContent_area{
+  resize: none;
+  width: 80%;
+  height: 100px;
+  outline: none;
+  border: solid 1px rgb(177 170 170 / 56%);
+  padding: 6px;
+  border-radius: 5px;
+}
+.rateContent_container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.rateContent_container h2{
+  font-size: 15px;
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+.rateButton{
+  width: 20%;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  padding: 8px 0;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(94, 39, 165);
+  margin-top: 10px;
+}

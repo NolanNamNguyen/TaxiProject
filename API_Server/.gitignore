@@ -1,0 +1,16 @@
+.vs/TaxiMainProject/v16/.suo
+Taxi.API/obj/project.assets.json
+Taxi.API/obj/project.nuget.cache
+Taxi.API/obj/Taxi.API.csproj.nuget.dgspec.json
+Taxi.API/obj/Debug/netcoreapp3.0/Taxi.API.assets.cache
+Taxi.API/obj/Debug/netcoreapp3.0/Taxi.API.csprojAssemblyReference.cache
+Taxi.Domain/obj/project.assets.json
+Taxi.Domain/obj/project.nuget.cache
+Taxi.Domain/obj/Taxi.Domain.csproj.nuget.dgspec.json
+Taxi.Domain/obj/Debug/netcoreapp3.0/Taxi.Domain.assets.cache
+Taxi.Domain/obj/Debug/netcoreapp3.0/Taxi.Domain.csprojAssemblyReference.cache
+Taxi.Infrastructure/obj/project.assets.json
+Taxi.Infrastructure/obj/project.nuget.cache
+Taxi.Infrastructure/obj/Taxi.Infrastructure.csproj.nuget.dgspec.json
+Taxi.Infrastructure/obj/Debug/netcoreapp3.0/Taxi.Infrastructure.assets.cache
+Taxi.Infrastructure/obj/Debug/netcoreapp3.0/Taxi.Infrastructure.csprojAssemblyReference.cache

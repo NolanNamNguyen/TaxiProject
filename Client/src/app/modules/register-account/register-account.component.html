@@ -1,0 +1,170 @@
+<div class="formContainer">
+  <form
+    [formGroup]="registerForm"
+    class="login_form"
+    (ngSubmit)="onSubmit()"
+    #f="ngForm"
+  >
+    <h1>{{'login.welcome' | translate}}</h1>
+    <app-app-logo [taxiColor]="'black'" class="form_logo"></app-app-logo>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-user"></i>
+        <input
+          class="login_input"
+          type="text"
+          required
+          formControlName="username"
+          #username
+        />
+        <p class="requiredSign">*</p>
+        <label [ngClass]="{ small_label: username.value }">{{'login.username' | translate}}</label>
+        <span class="focus-border"></span>
+      </div>
+      <div *ngIf="submitted && regisControl.username.errors" class="invalidContainer">
+        <span *ngIf="regisControl.username.errors.required" >{{'login.plsInputUser' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-lock"></i>
+        <input
+          class="login_input"
+          type="password"
+          required
+          formControlName="password"
+          #password
+        />
+        <p class="requiredSign">*</p>
+        <label [ngClass]="{ small_label: password.value }">{{'login.password' | translate}}</label>
+        <span class="focus-border"></span>
+      </div>
+      <div *ngIf="submitted && regisControl.password.errors" class="invalidContainer">
+        <span *ngIf="regisControl.password.errors.required" >{{'login.plsInputPassword' | translate}}</span>
+        <span *ngIf="regisControl.password.errors.minlength" >Password must be at least 6 characters</span>
+      </div>
+    </div>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-lock"></i>
+        <input
+          class="login_input"
+          type="password"
+          required
+          formControlName="confirmPassword"
+          #confirmPassword
+        />
+        <p class="requiredSign">*</p>
+        <label [ngClass]="{ small_label: confirmPassword.value }"
+          >{{'register.confirmPassword' | translate}}</label
+        >
+        <span class="focus-border"></span>
+      </div>
+      <div *ngIf="submitted && regisControl.confirmPassword.errors" class="invalidContainer">
+        <span *ngIf="regisControl.confirmPassword.errors.required" >Please input ConfirmPassword</span>
+        <span *ngIf="regisControl.confirmPassword.errors.mustMatch" >Confirm Password not match</span>
+      </div>
+    </div>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-signature"></i>
+        <input
+          class="login_input"
+          type="text"
+          required
+          formControlName="name"
+          #name
+        />
+        <p class="requiredSign">*</p>
+        <label [ngClass]="{ small_label: name.value }">{{'register.name' | translate}}</label>
+        <span class="focus-border"></span>
+      </div>
+      <div *ngIf="submitted && regisControl.name.errors" class="invalidContainer">
+        <span *ngIf="regisControl.name.errors.required" >Please input Name</span>
+      </div>
+    </div>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-mobile-alt"></i>
+        <input
+          class="login_input"
+          type="text"
+          required
+          pattern="^[0-9]*$"
+          formControlName="phone"
+          #phone
+        />
+        <label [ngClass]="{ small_label: phone.value }">{{'register.phone' | translate}}</label>
+        <span class="focus-border"></span>
+      </div>
+      <div *ngIf="submitted && regisControl.phone.errors" class="invalidContainer">
+        <span class="invalidFormSpan" *ngIf="regisControl.phone.errors?.pattern" >Please input number only</span>
+      </div>
+    </div>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-envelope"></i>
+        <input
+          class="login_input"
+          type="text"
+          required
+          formControlName="email"
+          #email
+        />
+        <p class="requiredSign">*</p>
+        <label [ngClass]="{ small_label: email.value }">{{'login.email' | translate}}</label>
+        <span class="focus-border"></span>
+      </div>
+      <div *ngIf="submitted && regisControl.email.errors" class="invalidContainer">
+        <span *ngIf="regisControl.email.errors.required" >Please input Email</span>
+        <span *ngIf="regisControl.email.errors.email" >Please input correct email</span>
+      </div>
+    </div>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-map-marker-alt"></i>
+        <input
+          class="login_input"
+          type="text"
+          required
+          formControlName="address"
+          #address
+        />
+        <label [ngClass]="{ small_label: address.value }">{{'register.address' | translate}}</label>
+        <span class="focus-border"></span>
+      </div>
+    </div>
+
+    <div class="inputBigContainer">
+      <div class="inputContainer">
+        <i class="form_icon fas fa-user-edit"></i>
+        <select
+          (change)="getcomboBoxValue()"
+          class="roleSelectBox login_input"
+          formControlName="role"
+          #role
+          id="cars"
+        >
+          <option value="Customer">{{'register.customer' | translate}}</option>
+          <option value="Driver">{{'register.driver' | translate}}</option>
+        </select>
+        <label [ngClass]="{ small_label: role.value }">{{'register.selectRole' | translate}}</label>
+        <span class="focus-border"></span>
+      </div>
+      <div *ngIf="submitted && regisControl.role.errors" class="invalidContainer">
+        <span *ngIf="regisControl.role.errors.required" >Please select a role</span>
+      </div>
+    </div>
+
+    <button type="submit" class="header_button">
+      {{'register.register' | translate}}
+    </button>
+  </form>
+</div>

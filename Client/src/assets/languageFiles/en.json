@@ -1,0 +1,43 @@
+{
+    "login": {
+        "welcome": "Welcome",
+        "email": "Email",
+        "username": "UserName",
+        "password": "Password",
+        "plsInputUser": "Please input username",
+        "plsInputPassword": "Please input Password",
+        "signUp": "Sign up if you dont have an account",
+        "loginbutton": "Login"
+    },
+    "register": {
+        "welcome": "Welcome",
+        "register": "Register",
+        "confirmPassword": "Confirm Password",
+        "selectRole": "Select a Role",
+        "name": "Name",
+        "address":"Address",
+        "customer":"Customer",
+        "driver":"Driver",
+        "phone": "Phone",
+        "email": "Email",
+        "password": "Password",
+        "plsInputUser": "Please input username",
+        "plsInputPassword": "Please input Password",
+        "signUp": "Sign up if you dont have an account",
+        "loginbutton": "Login"
+    },
+    "customerModule":{
+        "welcome": "Welcome Customer",
+        "profile": "Profile",
+        "search": "Search Booking",
+        "order": "My Order",
+        "username": "User Name",
+        "orderId": "Order Id",
+        "startProvince": "Start Province",
+        "destinationProvince": "Destination Province",
+        "driverName": "Driver Name",
+        "rate": "Rate",
+        "date": "Date",
+        "price": "Price"
+    }
+}

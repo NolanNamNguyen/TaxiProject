@@ -1,0 +1,137 @@
+
+@mixin flexColumn($width, $height) {
+  display: flex;
+  flex-direction: column;
+  width: $width;
+  height: $height;
+}
+
+@mixin noMarPad {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flexRow($width, $height) {
+  display: flex;
+  width: $width;
+  height: $height;
+}
+.header_nav {
+  @include flexRow(80%, 80px);
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+}
+
+.header_app {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: url("../../../../assets/Images/slidea.jpg");
+  z-index: -2;
+}
+
+
+
+.navContainer {
+  @include flexRow(83%, 50px);
+  align-items: center;
+  justify-content: flex-end;
+}
+.navContainer li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: 6%;
+}
+.navContainer li:hover {
+  cursor: pointer;
+}
+
+.navLink {
+  color: #ffffff !important;
+  position: relative;
+  height: 35px;
+  display: flex;
+  font-size: 17px;
+  align-items: center;
+}
+.navLink:hover {
+  color: #b386ec !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.navLink::before {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 3.4px;
+  background: #b386ec;
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+  top: 0;
+  transform: translateY(10px);
+}
+.navLink:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2.4px;
+  background: #b386ec;
+  content: "";
+  opacity: 0 !important;
+  transition: all 0.3s;
+  bottom: 0;
+  transform: translateY(-10px) !important;
+}
+
+.navLink:hover:before {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.navLink:hover:after {
+  opacity: 1 !important;
+  transform: translateY(0px) !important;
+}
+
+.header_nav h2 {
+  font-size: 20px;
+  width: 30%;
+}
+
+.header_button {
+  font-size: 15px;
+  z-index: 1;
+  position: relative;
+  color: white;
+  padding: 8px 27px;
+  border-radius: 8px;
+  background: transparent;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+}
+.header_button::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 131%;
+  top: -14%;
+  left: -129%;
+  background: -webkit-linear-gradient(
+    right,
+    #21d4fd,
+    #b721ff,
+    #21d4fd,
+    #b721ff
+  );
+  transition: all 0.3s ease-in-out;
+}
+.header_button:focus {
+  outline: none;
+}
+.header_button:hover::before {
+  left: -8%;
+}

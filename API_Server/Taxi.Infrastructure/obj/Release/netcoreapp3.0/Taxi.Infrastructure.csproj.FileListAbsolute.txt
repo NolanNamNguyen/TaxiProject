@@ -1,0 +1,15 @@
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\bin\Release\netcoreapp3.0\Taxi.Infrastructure.deps.json
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\bin\Release\netcoreapp3.0\Taxi.Infrastructure.runtimeconfig.json
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\bin\Release\netcoreapp3.0\Taxi.Infrastructure.runtimeconfig.dev.json
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\bin\Release\netcoreapp3.0\Taxi.Infrastructure.dll
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\bin\Release\netcoreapp3.0\Taxi.Infrastructure.pdb
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\bin\Release\netcoreapp3.0\Taxi.Domain.dll
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\bin\Release\netcoreapp3.0\Taxi.Domain.pdb
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.csprojAssemblyReference.cache
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.AssemblyInfoInputs.cache
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.AssemblyInfo.cs
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.csproj.CoreCompileInputs.cache
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.csproj.CopyComplete
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.dll
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.pdb
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Infrastructure\obj\Release\netcoreapp3.0\Taxi.Infrastructure.genruntimeconfig.cache

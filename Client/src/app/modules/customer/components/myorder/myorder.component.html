@@ -1,0 +1,57 @@
+<div *ngIf="myOrder" class="myOrder_MainContainer">
+  <div class="scheduleResult_container">
+    <div class="locationInformation_container">
+      <div class="startLocation locateInfo">
+        <h3>
+          Start Province: {{myOrder.pickUpLocation}}
+        </h3>
+        <!-- <h3>
+          Start Address: {{mySchedule.startAddress}}
+        </h3> -->
+      </div>
+      <div class="destinationLocation locateInfo">
+        <h3>
+          Destination Province: {{myOrder.returnLocation}}
+        </h3>
+        <!-- <h3>
+          Destination Address: {{mySchedule.destinationAddress}}
+        </h3> -->
+      </div>
+      <div class="slotTime locateInfo">
+        <h3>
+          Price: {{myOrder.price}}
+        </h3>
+        <h3>
+          Start Time: {{myOrder.created | date: 'dd/mm/yyyy, hh:mm'}}
+        </h3>
+      </div>
+    </div>
+    <div class="driverInfo_container">
+      <div class="scheduleAva_container">
+        <img
+          [src]="
+            myOrder.driverImg ? myOrder.driverImg : '../../../../../assets/Images/profile.jpg'
+          "
+        />
+      </div>
+      <h3 class="driverName">{{myOrder.driverName}}</h3>
+      <div class="rating_Container">
+        <div class="star-ratings">
+          <div class="fill-ratings" [ngStyle]="{'width': (myOrder.driverRate/5 *100) +'%'}">
+            <span>★★★★★</span>
+          </div>
+          <div class="empty-ratings">
+            <span>★★★★★</span>
+          </div>
+        </div>
+        <h3>{{myOrder.driverRate}}</h3>
+      </div>
+    </div>
+    <div class="orderAction_container">
+      <button (click)="removeCurrentOrder()" class="orderScheduleButton">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+</div>
+

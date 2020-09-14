@@ -1,0 +1,117 @@
+@import "../../../../assets/scss/variables/variables";
+
+.appCard_Container {
+  display: flex;
+}
+.app_Card {
+  width: 22%;
+  margin-left: 45px;
+}
+.chartBig_Container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 26px;
+  margin: 68px 0;
+}
+
+.chartContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    border: 0;
+    border-radius: 6px;
+    color: #333333;
+    background: #fff;
+    width: 32%;
+    position: relative;
+    height: 278px;
+    
+}
+
+.card-body{
+    padding-left: 15px;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+.card-title{
+    font-size: 24px;
+    color: #333941c4;
+    margin-bottom: 11px;
+}
+
+.card-footer{
+    color: #999999;
+    padding-left: 12px;
+    padding-bottom: 11px;
+}
+
+.chartHeader_orange{
+    box-shadow: $orange_shadow;
+    background: $orange_background;
+}
+
+.chartHeader_red{
+    background: $red_background;
+    box-shadow: $red_shadow;
+}
+
+.text-success i{
+    color: rgba(57, 131, 57, 0.822);
+}
+
+.card-footer i{
+    font-size: 15px;
+}
+
+.chartHeader{
+    padding: 22px 25px 12px 29px;
+    border-radius: 5px;
+    width: 86%;
+    position: absolute;
+    top: -35px;
+    right: 2%;
+}
+
+.chartHeader_green{
+    background: $green_background;
+    box-shadow: $green_shadow;
+}
+
+.card-category {
+    margin-bottom: 0;
+    color: #999999;
+  }
+
+::ng-deep .ct-chart {
+
+
+  .ct-label {
+    color: rgba($white-color, 0.7);
+  }
+  .ct-grid {
+    stroke: rgba(255, 255, 255, 0.2);
+  }
+  .ct-series-a .ct-point,
+  .ct-series-a .ct-line,
+  .ct-series-a .ct-bar,
+  .ct-series-a .ct-slice-donut {
+    stroke: rgba(255, 255, 255, 0.8);
+  }
+  .ct-series-a .ct-slice-pie,
+  .ct-series-a .ct-area {
+    fill: rgba(255, 255, 255, 0.4);
+  }
+  .ct-series-a .ct-bar {
+    stroke-width: 10px;
+  }
+  .ct-point {
+    stroke-width: 10px;
+    stroke-linecap: round;
+  }
+  .ct-line {
+    fill: none;
+    stroke-width: 4px;
+  }
+}

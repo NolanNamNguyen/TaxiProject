@@ -1,0 +1,9 @@
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\bin\Release\netcoreapp3.0\Taxi.Domain.deps.json
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\bin\Release\netcoreapp3.0\Taxi.Domain.dll
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\bin\Release\netcoreapp3.0\Taxi.Domain.pdb
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\obj\Release\netcoreapp3.0\Taxi.Domain.AssemblyInfoInputs.cache
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\obj\Release\netcoreapp3.0\Taxi.Domain.AssemblyInfo.cs
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\obj\Release\netcoreapp3.0\Taxi.Domain.csproj.CoreCompileInputs.cache
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\obj\Release\netcoreapp3.0\Taxi.Domain.dll
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\obj\Release\netcoreapp3.0\Taxi.Domain.pdb
+D:\CSharpWorkSpace\RikkeiProject\TaxiMainProjectGitLab\Taxi.Domain\obj\Release\netcoreapp3.0\Taxi.Domain.csprojAssemblyReference.cache

@@ -1,0 +1,426 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Taxi.API</name>
+    </assembly>
+    <members>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetAllDrivers">
+            <summary>
+            Get list drivers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetDriver(System.Int32)">
+            <summary>
+            Get driver by driverId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.DeleteDriver(System.Int32)">
+            <summary>
+            Delete driver by driverId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetAllCustomers">
+            <summary>
+            Get list customers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetCustomer(System.Int32)">
+            <summary>
+            Get customer by customerId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.DeleteCustomer(System.Int32)">
+            <summary>
+            Delete customer by customerId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetAllOrders">
+            <summary>
+            Get list orders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetOrder(System.Int32)">
+            <summary>
+            Get order by orderId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.NumOfDrivers">
+            <summary>
+            Get the number of drivers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.NumOfCustomers">
+            <summary>
+            get number of customers
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.NumOfOrders">
+            <summary>
+            get number of orders
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetAllReports">
+            <summary>
+            Get list reports
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.AdminsController.GetReportById(System.Int32)">
+            <summary>
+            Get report by reportId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.CustomerProfile">
+            <summary>
+            Get customer profile
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.GetOrdersOfUser">
+            <summary>
+            Get list customer's orders(have been complete)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.GetCurrentOrderOfUser(System.Int32)">
+            <summary>
+            Get current order of Customer by CustomerId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.GetOrderById(System.Int32)">
+            <summary>
+            Get order by orderId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.SearchSchedule(Taxi.Domain.Models.Customers.orders.SearchScheduleModel)">
+            <summary>
+            Find route to book
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.Booking(Taxi.Domain.Models.Customers.orders.AddOrderModel)">
+            <summary>
+            Booking
+            </summary>
+            <remarks>
+                use the infomation have been search to booking
+            </remarks>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.DeleteOrder(System.Int32)">
+            <summary>
+            Delete order by orderId 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.CancelOrder(System.Int32)">
+            <summary>
+            cancel booking
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.Rating(System.Int32,Taxi.Domain.Models.Customers.orders.RateModel)">
+            <summary>
+            booking reviews
+            </summary>
+            <remarks>
+                the booking must be completed to be rating. (status == true)
+            </remarks>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.GetReportsOfUser">
+            <summary>
+            Get a list of my reports
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.GetReportById(System.Int32)">
+            <summary>
+            get a report by reportId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.CustomersController.Reporting(Taxi.Domain.Models.Customers.Reports.CreateReportModel)">
+            <summary>
+            Post report
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.VCreate(Taxi.Domain.Models.Drivers.Vehicles.VehicleRegisterModel)">
+            <summary>
+            Register vehicle
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.VDelete(System.Int32)">
+            <summary>
+            Delete vehicle
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.VGetAll">
+            <summary>
+            Get a list of vehicles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.VGetById(System.Int32)">
+            <summary>
+            Get a vehicle by driverId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.VUpdate(System.Int32,Taxi.Domain.Models.Drivers.Vehicles.VehicleUpdateModel)">
+            <summary>
+            update vehicle info by driverId
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.SCreate(Taxi.Domain.Models.Drivers.Schedule.RegisterScheduleModel)">
+            <summary>
+            Register schedule
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.SDelete(System.Int32)">
+            <summary>
+            Delete schedule by driverId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.SGetAll">
+            <summary>
+            Get a list of schedules
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.SGetById(System.Int32)">
+            <summary>
+            Get a schedule by driverId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.SUpdate(System.Int32,Taxi.Domain.Models.Drivers.Schedule.RegisterScheduleModel)">
+            <summary>
+            Update schedule info by driverId
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.DGetAll">
+            <summary>
+            get a list of drivers 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.DriverProfile">
+            <summary>
+            Get driver profile
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.GetReviewsOfDriver(System.Int32)">
+            <summary>
+            Get driver's reviews
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.GetOrdersOfUser">
+            <summary>
+            get driver's orders list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.DriversController.CompleteOrder(System.Int32)">
+            <summary>
+            mark the booking completed by orderId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.GetAllReviews">
+            <summary>
+            Get posts list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.GetReview(System.Int32)">
+            <summary>
+            get a post by reviewId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.PostReview(Taxi.Domain.Models.Forum.AddReviewModel)">
+            <summary>
+            post review
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.DeleteReview(System.Int32)">
+            <summary>
+            Delete a review(post) by reviewId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.LikeReview(Taxi.Domain.Models.Forum.AddLikeModel)">
+            <summary>
+            like a review
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.UnlikeReview(Taxi.Domain.Models.Forum.AddLikeModel)">
+            <summary>
+            Unlike a review
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.GetAllCommentOfReview(System.Int32)">
+            <summary>
+            Get a comments list of a post(review) by reviewId 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.AddCommentToReview(System.Int32,Taxi.Domain.Models.Forum.AddCommentModel)">
+            <summary>
+            comment to a post(review)
+            </summary>
+            <remarks>
+                by reviewId
+            </remarks>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.ForumController.DeleteComment(System.Int32)">
+            <summary>
+            Delete a comment by commentId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.NotifyController.GetNotifiesOfUser">
+            <summary>
+            Get Notifies of User
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.Authenticate(Taxi.API.Models.AuthenticateModel)">
+            <summary>
+            Login
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET /authenticate
+                {
+                    "UserName":"customer1",
+                    "Password":"customer123"
+                }
+            </remarks>
+            <param name="model"></param>
+            <returns>Info of user and token</returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.Register(Taxi.API.Models.RegisterModel)">
+            <summary>
+            Register new account
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.VerifyEmail(Taxi.Domain.Models.Users.VerifyEmailRequestModel)">
+            <summary>
+            Verify email after register account
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.ForgotPassword(Taxi.Domain.Models.Users.ForgotPasswordRequestModel)">
+            <summary>
+            Send email to reset password
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.ResetPassword(Taxi.Domain.Models.Users.ResetPasswordRequestModel)">
+            <summary>
+            Reset Password
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.GetAll">
+            <summary>
+            Get list Users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.GetById(System.Int32)">
+            <summary>
+            Get user by userId
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.Update(System.Int32,Taxi.API.Models.UpdateModel)">
+            <summary>
+            Upload avatar, edit infomation of user
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Taxi.API.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Delete user
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

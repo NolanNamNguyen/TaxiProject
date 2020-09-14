@@ -1,0 +1,19 @@
+.admin_container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #eee;
+}
+.admin_sidebar{
+    width: 13%;
+    height: 100%;
+}
+.center_page{
+    width: 87%;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../../../assets/Images/DriverBackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

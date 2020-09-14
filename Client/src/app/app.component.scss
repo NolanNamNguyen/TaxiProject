@@ -1,0 +1,50 @@
+.i18nChoice_container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 145px;
+  height: 38px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.i18nChoice_container p {
+  margin: 0;
+}
+.listLanguage_container {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  visibility: hidden;
+  align-items: center;
+  opacity: 0;
+  top: 50px;
+  transform: translateY(30px);
+  transition: all 0.3s ease-in-out;
+}
+.listLanguage_container .languageButton {
+  background-color: white;
+  width: 130px;
+  height: 13px;
+  border-radius: 10px;
+  margin-bottom: 9px;
+  padding: 8px;
+}
+.listLanguage_container_reveal {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+.languageButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 15px;
+}

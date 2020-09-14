@@ -1,0 +1,7 @@
+<div class="admin_container">
+    <app-side-bar [userName]="userName" [role]="userRole" [taxiAppRoute]="myRoute" class="admin_sidebar"></app-side-bar>
+    <div class="center_page">
+        <app-navbar [taxiAppRoute]="myRoute"></app-navbar>
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<nav class="navBar_Container">
+  <!-- <h2>{{getTitle()}}</h2> -->
+  <h2>{{ getTitle() }}</h2>
+  <div class="navBar_iconContainer">
+    <div (click)="makeVisible()" class="notifier_Container">
+      <i class="material-icons driverNotifier">notifications</i>
+      <div *ngIf="notiList && notiList.length > 0" class="numberOfNotify">
+        <p>
+          {{ unReadNotiList.length }}
+        </p>
+      </div>
+      <div *ngIf="notiList" class="notifyContainer inviNotify">
+        <div *ngFor="let noti of notiList" (mouseenter)="makeAsRead(noti)" [ngClass]="{'unreadNoti': !noti.isRead}" class="notifyContent">
+          <p>{{noti.content}}</p>
+        </div>
+      </div>
+    </div>
+    <button (click)="logout()" class="header_button">Log out</button>
+  </div>
+</nav>

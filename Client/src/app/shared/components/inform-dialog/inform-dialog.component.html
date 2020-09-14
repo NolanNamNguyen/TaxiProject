@@ -1,0 +1,27 @@
+<div *ngIf="data.isSuccess" class="successDialog">
+  <div class="success-checkmark">
+    <div class="check-icon">
+      <span class="icon-line line-tip"></span>
+      <span class="icon-line line-long"></span>
+      <div class="icon-circle"></div>
+      <div class="icon-fix"></div>
+    </div>
+  </div>
+  <h3>{{data.successMessage}}</h3>
+</div>
+
+<div *ngIf="data.isLoading" class="loadingDialog">
+  <mat-spinner></mat-spinner>
+  <h3>{{data.loadingMessage}}</h3>
+</div>
+
+<div *ngIf="data.isFailed" class="loadingDialog">
+  <i class="fas fa-times"></i>
+  <h3>{{data.failedMessage}}</h3>
+</div>
+
+<div class="alreadyRate" *ngIf="data.isAlreadyRate" > 
+  <p>
+    You already rate this order
+  </p>
+</div>

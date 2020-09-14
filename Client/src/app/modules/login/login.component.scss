@@ -1,0 +1,289 @@
+@mixin flexColumn($width, $height) {
+  display: flex;
+  flex-direction: column;
+  width: $width;
+  height: $height;
+  align-items: center;
+}
+
+@mixin noMarPad {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flexRow($width, $height) {
+  display: flex;
+  width: $width;
+  height: $height;
+}
+
+.formContainer {
+  @include flexRow(100vw, 100vh);
+  @include noMarPad();
+  justify-content: center;
+  background-image: url("../../../assets/Images/DriverBackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login_form {
+  @include flexColumn(30%, 515px);
+  box-shadow: 0 0 10px 4px rgba(115, 65, 180, 0.1);
+  border-radius: 10px;
+  margin-top: 6%;
+  padding-top: 38px;
+  background-color: white;
+}
+
+.form_logo {
+  padding-right: 5%;
+  margin-bottom: 9%;
+}
+
+.login_form h1 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.inputContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+:focus {
+  outline: none;
+}
+
+.form_icon {
+  position: absolute;
+  left: -20%;
+  top: 15%;
+  font-size: 25px;
+  color: rgba(75, 60, 88, 0.815);
+}
+
+input {
+  font: 17px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.login_input {
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.login_input ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #b386ec;
+  transition: 0.4s;
+}
+.login_input:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+.login_input ~ label {
+  position: absolute;
+  font-size: 16px;
+  left: 0;
+  width: 100%;
+  top: 9px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: 1;
+  letter-spacing: 0.5px;
+}
+.login_input:focus ~ label,
+.login_input ~ .small_label {
+  top: -16px;
+  font-size: 12px;
+  color: #b386ec;
+  transition: 0.3s;
+}
+
+/*= input focus effects css End
+=============================== */
+
+.header_button {
+  font-size: 15px;
+  z-index: 1;
+  position: relative;
+  color: white;
+  padding: 8px 27px;
+  border-radius: 8px;
+  background: transparent;
+  overflow: hidden;
+  border: none;
+  margin-top: 7%;
+  cursor: pointer;
+}
+.header_button::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 131%;
+  top: -14%;
+  left: -129%;
+  background: -webkit-linear-gradient(
+    right,
+    #21d4fd,
+    #b721ff,
+    #21d4fd,
+    #b721ff
+  );
+  transition: all 0.3s ease-in-out;
+}
+.header_button:focus {
+  outline: none;
+}
+.header_button:hover::before {
+  left: -8%;
+}
+.login_form h2 {
+  margin-top: 2%;
+}
+
+.shadow_hover {
+  display: inline-block;
+  position: relative;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  color: #3b3a3b;
+}
+
+.shadow_hover:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  top: 85%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.69) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  /* W3C */
+  transition-duration: 0.3s;
+}
+
+.shadow_hover:hover {
+  transform: translateY(-6px);
+  animation-name: hover;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.shadow_hover:hover:before {
+  opacity: 0.4;
+  transform: translateY(6px);
+  animation-name: hover-shadow;
+  animation-duration: 1.5s;
+  animation-delay: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.face:hover {
+  color: #4267b2;
+}
+
+.twitter:hover {
+  color: #1da1f2;
+}
+
+.google:hover {
+  color: red;
+}
+
+.icon_social_contain a:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+.icon_social_contain a {
+  transition: all 0.3s;
+}
+
+.icon_social_contain {
+  @include flexRow(116px, 20px);
+  justify-content: space-between;
+  font-size: 23px;
+}
+
+@keyframes hover-shadow {
+  0% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(6px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes hover {
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(-7px);
+  }
+}
+
+.registerLink {
+  font-size: 15px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+.inputBigContainer {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.invalidContainer {
+  position: absolute;
+  width: 100%;
+  top: 31px;
+  left: 15%;
+}
+.invalidContainer span {
+  color: rgb(216, 34, 34);
+  margin-right: 10px;
+}
+
+
+

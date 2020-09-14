@@ -1,0 +1,12 @@
+<!-- <app-app-header></app-app-header> -->
+<div *ngIf="header" (click)="toggleInvi()" class="i18nChoice_container">
+  <p>Select a language</p>
+  <ul class="listLanguage_container">
+    <li (click)="setLang('en')" class="languageButton">English</li>
+    <li (click)="setLang('jp')" class="languageButton bottomButton">
+      Japanese
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
+<!-- <app-app-footer></app-app-footer> -->

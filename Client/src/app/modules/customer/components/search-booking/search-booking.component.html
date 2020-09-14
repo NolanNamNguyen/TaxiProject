@@ -1,0 +1,108 @@
+<div class="searchPage_container">
+  <div class="searchBar_container">
+    <form [formGroup]="searchForm" class="login_form" (ngSubmit)="onSearch()">
+      <div class="infoInput_container">
+          <div class="province_container">
+              <div class="inputContainer">
+                  <ejs-combobox
+                    class="provinceCombobox"
+                    id="games"
+                    #startProvince
+                    [dataSource]="searchProvinceList"
+                    (change)="onComboboxChange($event)"
+                    [fields]="fields"
+                    [(value)]="value"
+                    [placeholder]="waterMark1"
+                    [popupHeight]="height"
+                  ></ejs-combobox>
+                </div>
+          </div>
+          <div class="province_container">
+              <div class="inputContainer">
+                  <ejs-combobox
+                    class="provinceCombobox"
+                    id="games"
+                    #endProvince
+                    [dataSource]="searchProvinceList"
+                    (change)="onComboboxChange($event)"
+                    [fields]="fields2"
+                    [(value)]="value2"
+                    [placeholder]="waterMark2"
+                    [popupHeight]="height"
+                  ></ejs-combobox>
+                </div>
+          </div>
+          <div class="reservations_container">
+              <div class="inputContainer">
+                  <i class="form_icon fas fa-chair"></i>
+                  <input
+                    class="login_input"
+                    type="text"
+                    required
+                    formControlName="reservation"
+                    #reservation
+                  />
+                  <label [ngClass]="{'small_label':reservation.value}">Reservation</label>
+                  <span class="focus-border"></span>
+              </div>
+          </div>
+      </div>
+      <div class="searchButton_container">
+          <button type="submit" >
+            <i class="fas fa-search"></i>
+          </button>
+      </div>
+    </form>
+  </div>
+  
+  <div *ngFor="let schedule of scheduleList" class="scheduleResult_container">
+    <div class="locationInformation_container">
+      <div class="startLocation locateInfo">
+        <h3>
+          Start Province: {{schedule.startProvince}}
+        </h3>
+        <h3>
+          Start Address: {{schedule.startAddress}}
+        </h3>
+      </div>
+      <div class="destinationLocation locateInfo">
+        <h3>
+          Destination Province: {{schedule.destinationProvince}}
+        </h3>
+        <h3>
+          Destination Address: {{schedule.destinationAddress}}
+        </h3>
+      </div>
+      <div class="slotTime locateInfo">
+        <h3>
+          Available Slot: {{schedule.availableSlot}}
+        </h3>
+        <h3>
+          Start Time: {{schedule.startTime | date: 'dd/MM/yyy, hh:mm'}}
+        </h3>
+      </div>
+    </div>
+    <div class="driverInfo_container">
+      <div class="scheduleAva_container">
+        <img [src]="schedule.imagePath ? schedule.imagePath: '../../../../../assets/Images/profile.jpg'">
+      </div>
+      <h3 class="driverName">{{schedule.driverName}}</h3>
+      <div class="rating_Container">
+        <div class="star-ratings">
+          <div class="fill-ratings" [ngStyle]="{'width': (schedule.rateAverage/5 *100) +'%'}">
+            <span>★★★★★</span>
+          </div>
+          <div class="empty-ratings">
+            <span>★★★★★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="orderAction_container">
+      <button (click)="orderSchedule(schedule.scheduleId)" class="orderScheduleButton">
+        <i class="fas fa-check"></i>
+      </button>
+    </div>
+  </div>
+</div>
+

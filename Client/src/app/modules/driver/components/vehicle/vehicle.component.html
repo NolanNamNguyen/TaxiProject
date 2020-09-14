@@ -1,0 +1,126 @@
+<div class="formContainer">
+  <form
+    *ngIf="!myVehicle && registerForm"
+    [formGroup]="registerForm"
+    class="vehicle_form"
+    (ngSubmit)="onSubmit()"
+  >
+    <app-app-logo [taxiColor]="'black'" class="form_logo"></app-app-logo>
+    <h2>Vehicle Registration</h2>
+    <div class="vehicleForm_container">
+      <div class="vehicleForm_continerLeft">
+        <div class="vehicleImg">
+          <img [src]="imageUrl ? imageUrl : '../../../../../assets/Images/home1_2.jpg'"> 
+        </div>
+        <input #imgInput id="vehicle_imageInput" type="file" name="vehicleImage" required (change)="onFileChange($event)"/>
+        <button type="button" (click)="imgInput.click()">Upload Image</button>
+      </div>
+      <div class="vehicleForm_continerRight">
+        <div class="inputContainer">
+          <i class="form_icon fas fa-envelope"></i>
+          <input
+            class="vehicle_input"
+            type="text"
+            required
+            formControlName="license"
+            #license
+          />
+          <label
+            class="driver_inputLabel_textInput"
+            [ngClass]="{ small_label: license.value }"
+            >License</label
+          >
+          <span class="focus-border"></span>
+        </div>
+        <div class="inputContainer">
+          <i class="form_icon fas fa-car"></i>
+          <input
+            class="vehicle_input"
+            type="text"
+            required
+            formControlName="vehiclename"
+            #vehiclename
+          />
+          <span class="focus-border"></span>
+          <label [ngClass]="{ small_label: vehiclename.value }"
+            >Vehicle Model</label
+          >
+        </div>
+        <div class="inputContainer">
+          <i class="form_icon fas fa-chair"></i>
+          <input
+            class="vehicle_input"
+            type="text"
+            required
+            formControlName="seater"
+            #seater
+          />
+          <span class="focus-border"></span>
+          <label [ngClass]="{ small_label: seater.value }"
+            >Number of Seat</label
+          >
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="header_button">
+      Register
+    </button>
+  </form>
+  <div *ngIf="myVehicle" class="vehicle_container">
+    <h2>Your Vehicle Information</h2>
+    <div class="vehicleForm_container">
+      <div class="vehicleForm_continerLeft">
+        <div class="vehicleImg">
+          <img [src]="myVehicle.imagePath ? myVehicle.imagePath : '../../../../../assets/Images/home1_2.jpg'"> 
+        </div>
+      </div>
+      <div class="vehicleForm_continerRight">
+        <div class="inputContainer">
+          <i class="form_icon fas fa-envelope"></i>
+          <input
+            class="vehicle_input"
+            value="{{myVehicle.license}}"
+            disabled
+            #license
+          />
+          <label
+            class="driver_inputLabel_textInput"
+            [ngClass]="{ small_label: license.value }"
+            >License</label
+          >
+          <span class="focus-border"></span>
+        </div>
+        <div class="inputContainer">
+          <i class="form_icon fas fa-car"></i>
+          <input
+            class="vehicle_input"
+            value="{{myVehicle.vehicleName}}"
+            disabled
+            #vehiclename
+          />
+          <span class="focus-border"></span>
+          <label [ngClass]="{ small_label: vehiclename.value }"
+            >Vehicle Model</label
+          >
+        </div>
+        <div class="inputContainer">
+          <i class="form_icon fas fa-chair"></i>
+          <input
+            class="vehicle_input"
+            value="{{myVehicle.seater}}"
+            disabled
+            #seater
+          />
+          <span class="focus-border"></span>
+          <label [ngClass]="{ small_label: seater.value }"
+            >Number of Seat</label
+          >
+        </div>
+      </div>
+    </div>
+    <button (click)="removeVehicle()" class="header_button">
+      Remove
+    </button>
+  </div>
+</div>

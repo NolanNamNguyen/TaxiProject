@@ -1,0 +1,131 @@
+.navBar_Container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  color: white;
+}
+.navBar_Container h2 {
+  padding-left: 27px;
+}
+.navBar_iconContainer {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15px;
+}
+.navBar_iconContainer i {
+  color: #3c4858;
+}
+.navBar_iconContainer i:hover {
+  cursor: pointer;
+}
+
+.header_button {
+  font-size: 15px;
+  z-index: 1;
+  position: relative;
+  color: white;
+  padding: 8px 27px;
+  border-radius: 8px;
+  background: transparent;
+  overflow: hidden;
+  border: none;
+  height: 70%;
+  cursor: pointer;
+}
+.header_button::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 131%;
+  top: -14%;
+  left: -129%;
+  background: -webkit-linear-gradient(
+    right,
+    #21d4fd,
+    #b721ff,
+    #21d4fd,
+    #b721ff
+  );
+  transition: all 0.3s ease-in-out;
+}
+.header_button:focus {
+  outline: none;
+}
+.header_button:hover::before {
+  left: -8%;
+}
+.numberOfNotify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rebeccapurple;
+  color: white;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  padding: 5px;
+  right: -5px;
+  top: -7px;
+}
+.numberOfNotify p {
+  margin: 0;
+}
+.notifier_Container {
+  display: flex;
+  width: 25px;
+  position: relative;
+}
+.driverNotifier {
+  width: 100%;
+}
+.notifyContainer {
+  overflow: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 378px;
+  height: 500px;
+  position: absolute;
+  right: 0;
+  top: 26px;
+  background-color: white;
+  visibility: visible;
+  background-color: #7f53ac;
+  background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
+  border-radius: 15px;
+  padding: 30px;
+  z-index: 3;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+.inviNotify {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px);
+  transition: all 0.3s ease-in-out;
+}
+.notifyContent {
+  cursor: pointer;
+  display: flex;
+  background-color: #fffffff7;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 80%;
+  height: 56px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+.notifyContent p{
+  color: black;
+}
+
+.unreadNoti{
+  background-color: rgb(103, 92, 177);
+}

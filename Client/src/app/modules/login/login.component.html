@@ -1,0 +1,65 @@
+<div class="formContainer">
+  <form [formGroup]="loginForm" class="login_form" (ngSubmit)="onSubmit()">
+    <h1>{{'login.welcome' | translate}}</h1>
+    <app-app-logo [taxiColor]="'black'  " class="form_logo"></app-app-logo>
+
+    <div class="inputBigContainer">
+    <div class="inputContainer">
+      <i class="form_icon fas fa-envelope"></i>
+      <input
+        class="login_input"
+        type="text"
+        required
+        formControlName="username"
+        #email
+      />
+      <label [ngClass]="{'small_label':email.value}">{{'login.username' | translate}}</label>
+      <span class="focus-border"></span>
+    </div>
+    <div *ngIf="submitted && f.username.errors" class="invalidContainer">
+      <span *ngIf="f.username.errors.required" >{{'login.plsInputUser' | translate}}</span>
+    </div>
+  </div>
+  <div class="inputBigContainer">
+    <div class="inputContainer">
+      <i class="form_icon fas fa-lock"></i>
+      <input
+        class="login_input"
+        type="password"
+        required
+        formControlName="password"
+        #password
+      />
+      <label [ngClass]="{'small_label':password.value}">{{'login.password' | translate}}</label>
+      <span class="focus-border"></span>
+    </div>
+    <div *ngIf="submitted && f.password.errors" class="invalidContainer">
+      <span *ngIf="f.password.errors.required" >{{'login.plsInputPassword' | translate}}</span>
+    </div>
+  </div>
+    <button type="submit" class="header_button">
+      {{'login.loginbutton' | translate}}
+    </button>
+    <!-- <h2>Or sign in with</h2>
+    <div class="icon_social_contain">
+      <a
+        class="shadow_hover google"
+        target="_blank"
+        ><i class="fab fa-google"></i
+      ></a>
+      <a
+        class="shadow_hover face"
+        target="_blank"
+        ><i class="fab fa-facebook-square"></i
+      ></a>
+      <a
+        class="shadow_hover twitter"
+        target="_blank"
+        ><i class="fab fa-twitter"></i
+      ></a>
+    </div> -->
+    <a class="registerLink"routerLink="/register">{{'login.signUp' | translate}}</a>
+  </form>
+</div>
+
+

@@ -1,0 +1,16 @@
+<div class="cardContainer">
+  <div class="card_mainSpace">
+    <div class="card_icon" [ngStyle]="styleObject()">
+      <i class="material-icons">{{inCardModel.icon_content}}</i>
+      <!-- <i class="material-icons">{{content_copy}}</i> -->
+    </div>
+    <div class="card_description">
+      <p class="card-category">{{inCardModel.category}}</p>
+      <h3 class="card-title">{{inCardModel.description}}</h3>
+    </div>
+  </div>
+  <div class="card_footer">
+      <i class="material-icons">{{inCardModel.footer_icon}}</i>
+      <p href="">{{inCardModel.footer_desc}}</p>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="profilePage_bigContainer">
+  <div *ngIf="myProfile" class="cusProfile_container">
+    <div class="avatar_container">
+      <img
+        [src]="
+          myProfile.imagePath
+            ? myProfile.imagePath
+            : '../../../../../assets/Images/home1_2.jpg'
+        "
+      />
+    </div>
+    <div class="driverInfo_container">
+      <div class="driverInfo">
+        <p class="infoTitle">User Name:</p>
+        <p class="infoDetail">{{ myProfile.userName }}</p>
+      </div>
+      <div class="driverInfo">
+        <p class="infoTitle">Name:</p>
+        <p class="infoDetail">{{ myProfile.name }}</p>
+      </div>
+      <div class="driverInfo">
+        <p class="infoTitle">Phone:</p>
+        <p class="infoDetail">{{ myProfile.phone }}</p>
+      </div>
+      <div class="driverInfo">
+        <p class="infoTitle">Email:</p>
+        <p class="infoDetail">{{ myProfile.email }}</p>
+      </div>
+      <div class="driverInfo">
+        <p class="infoTitle">Address:</p>
+        <p class="infoDetail">{{ myProfile.address }}</p>
+      </div>
+      <div class="rateInfo_container">
+        <div class="rating_Container">
+          <div class="star-ratings">
+            <div
+              class="fill-ratings"
+              [ngStyle]="{
+                width: ((myProfile.rateAverage / 5) * 100) + '%'
+              }"
+            >
+              <span>★★★★★</span>
+            </div>
+            <div class="empty-ratings">
+              <span>★★★★★</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customerComment_container">
+    <div class="indicator_block comment_bigContainer">
+      <div *ngFor="let review of reviewList, let i = index" class="commentLoop_Container">
+        <hr class="hrComment" *ngIf="i > 0">
+        <div class="comment_container">
+          <div class="customerComment_info">
+            <div class="customerComment_avatar">
+              <img [src]="review.customerImage ? review.customerImage : '../../../../../assets/Images/profile.jpg'"/>
+            </div>
+            <h2>{{ review.customerName }}</h2>
+          </div>
+          <div class="comment_content">
+            <div class="ratingComment_content">
+              <div class="ratingComment">
+                <div class="star-ratings_comment">
+                  <div class="fill-ratings" [ngStyle]="{'width': (review.rate/5 *100) +'%'}">
+                    <span>★★★★★</span>
+                  </div>
+                  <div class="empty-ratings">
+                    <span>★★★★★</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="commentText_container">
+              <p class="comment_text">{{review.rateContent}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="listHeader listHeader_red">
+      <h4 class="listTitle">Customer Comments</h4>
+      <p class="listCategory">Here is all your customer's comments</p>
+    </div>
+  </div>
+</div>

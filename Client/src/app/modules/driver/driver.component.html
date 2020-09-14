@@ -1,0 +1,8 @@
+<div class="driver_container">
+  <notifier-container></notifier-container>
+  <app-driver-sidebar [driverRoute]="driverRoute" [role]="userRole" [userName]="userName" class="driver_sidebar"></app-driver-sidebar>
+  <div class="center_page">
+      <app-navbar (makeReadNoti)="makeAsRead($event)" [unReadNotiList]="unReadNotiList" [notiList]="notifyList" [taxiAppRoute]="driverRoute"></app-navbar>
+      <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+<div *ngIf="data.isDeleting" class="deleteingDialog">
+    <h1 mat-dialog-title>Are you sure you want to delete this account</h1>
+    <div class="button_Container" mat-dialog-actions>
+        <button class="confirmYes" mat-button [mat-dialog-close]="onYesClick()">Yes!</button>
+        <button mat-button (click)="onNoClick()">No</button>
+    </div>
+</div>
+
+<div *ngIf="data.isLoading" class="loadingDialog">
+sadfasfdasdf
+</div>
+
+<div *ngIf="data.isReviewing">
+    <div class="reviewRate_Container">
+        <div class="driverAvatar">
+            <img [src]="data.driverAvatar ? data.driverAvatar : '../../../../assets/Images/light-logo.png'">
+        </div>
+        <h2 class="driverName">
+            {{data.driverName}}
+        </h2>
+        <div class="rating_Container">
+            <div id="rate" class="star-ratings">
+              <div class="fill-ratings" [ngStyle]="{'width': (data.rate/5 *100) +'%'}">
+                <span>★★★★★</span>
+              </div>
+              <div class="empty-ratings">
+                <span>★★★★★</span>
+              </div>
+            </div>
+            <h3>{{data.rate}} star</h3>
+        </div>
+        <div class="rateContent_container">
+            <h2>
+                Your comment:
+            </h2>
+            <textarea class="rateContent_area" [(ngModel)]="data.rateContent"></textarea>
+        </div>
+        <button class="rateButton" mat-button [mat-dialog-close]="data">Vote!</button>
+    </div>
+</div>

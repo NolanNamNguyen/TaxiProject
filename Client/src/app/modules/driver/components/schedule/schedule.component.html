@@ -1,0 +1,233 @@
+<div class="formContainer">
+  <form *ngIf="!mySchedule && scheduleForm" [formGroup]="scheduleForm" class="vehicle_form" (ngSubmit)="onSubmit()">
+    <app-app-logo [taxiColor]="'black'" class="form_logo"></app-app-logo>
+    <h2>Schedule Registration</h2>
+    <div class="vehicleForm_container">
+      <div class="vehicleForm_continerLeft">
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-map-marked"></i>
+            <input
+              class="vehicle_input"
+              type="text"
+              formControlName="startAddress"
+              #startAddress
+            />
+            <label
+              class="driver_inputLabel_textInput"
+              [ngClass]="{ small_label: startAddress.value }"
+              >Start Address</label
+            >
+            <span class="focus-border"></span>
+          </div>
+        </div>
+        
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-location-arrow"></i>
+            <input
+              class="vehicle_input"
+              type="text"
+              formControlName="destinationAddress"
+              #destinationAddress
+            />
+            <span class="focus-border"></span>
+            <label [ngClass]="{ small_label: destinationAddress.value }"
+              >Destination Address</label
+            >
+          </div>
+        </div>
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-chair"></i>
+            <input
+              class="vehicle_input"
+              type="text"
+              pattern="^[0-9]*$"
+              formControlName="availableSeat"
+              #availableSeat
+            />
+            <p class="requiredSign signForInput">*</p>
+            <span class="focus-border"></span>
+            <label [ngClass]="{ small_label: availableSeat.value }"
+              >Available Seat</label
+            >
+          </div>
+          <div *ngIf="submitted && submitScheduleForm.availableSeat.errors" class="invalidContainer">
+            <span class="invalidFormSpan" *ngIf="submitScheduleForm.availableSeat.errors.required" >Please input Available Seat</span>
+            <span class="invalidFormSpan" *ngIf="submitScheduleForm.availableSeat.errors?.pattern" >Please input number only</span>
+          </div>
+        </div>
+      </div>
+      <div class="vehicleForm_continerRight">
+        <div class="inputBigContainer divComboBox">
+          <div class="inputContainer">
+            <ejs-combobox
+              class="provinceCombobox"
+              id="games"
+              #startProvince
+              [dataSource]="scheduleProvinceList"
+              [fields]="fields"
+              [(value)]="value"
+              [placeholder]="waterMark1"
+              [popupHeight]="height"
+            ></ejs-combobox>
+            <p class="requiredSign">*</p>
+          </div>
+          <div *ngIf="submitted && !startProvince.value" class="invalidContainer">
+            <span class="invalidFormSpan" >Please input Start Province</span>
+          </div>
+        </div>
+        <div class="inputBigContainer divComboBox">
+          <div class="inputContainer">
+            <ejs-combobox
+              class="provinceCombobox"
+              id="games"
+              #endProvince
+              [dataSource]="scheduleProvinceList"
+              [fields]="fields2"
+              [(value)]="value2"
+              [placeholder]="waterMark2"
+              [popupHeight]="height"
+            ></ejs-combobox>
+            <p class="requiredSign">*</p>
+
+          </div>
+          <div *ngIf="submitted && !endProvince.value" class="invalidContainer">
+            <span class="invalidFormSpan" >Please input Start Destination province</span>
+          </div>
+        </div>
+        <div class="inputBigContainer divDatePicker">
+          <div class="inputContainer">
+            <mat-form-field class="startDatePicker">
+              <input [min]="minDate" matInput [ngxMatDatetimePicker]="picker1" 
+              placeholder="Start Day" formControlName="startDate">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <ngx-mat-datetime-picker #picker1></ngx-mat-datetime-picker>
+            </mat-form-field>
+          </div>
+          <p class="requiredSign">*</p>
+          <div *ngIf="submitted && submitScheduleForm.startDate.errors" class="invalidContainer">
+            <span class="invalidFormSpan" *ngIf="submitScheduleForm.startDate.errors.required" >Please input Start date time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      class="header_button"
+    >
+      Register
+    </button>
+  </form>
+  <div *ngIf="mySchedule" class="vehicle_form">
+    <h2>Your Schedule Information</h2>
+    <div class="vehicleForm_container">
+      <div class="vehicleForm_continerLeft">
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-map-marked"></i>
+            <input
+              class="vehicle_input"
+              disabled
+              value="{{mySchedule.startAddress}}"
+              #startAddress
+            />
+            <label
+              class="driver_inputLabel_textInput"
+              [ngClass]="{ small_label: startAddress.value }"
+              >Start Address</label
+            >
+            <span class="focus-border"></span>
+          </div>
+        </div>
+        
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-location-arrow"></i>
+            <input
+              class="vehicle_input"
+              disabled
+              value="{{mySchedule.destinationAddress}}"
+              #destinationAddress
+            />
+            <span class="focus-border"></span>
+            <label [ngClass]="{ small_label: destinationAddress.value }"
+              >Destination Address</label
+            >
+          </div>
+        </div>
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-chair"></i>
+            <input
+              class="vehicle_input"
+              disabled
+              value="{{mySchedule.availableSlot}}"
+              #availableSeat
+            />
+            <span class="focus-border"></span>
+            <label [ngClass]="{ small_label: availableSeat.value }"
+              >Available Seat</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="vehicleForm_continerRight">
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-map-marked"></i>
+            <input
+              class="vehicle_input"
+              disabled
+              value="{{mySchedule.startProvince}}"
+              #startProvince
+            />
+            <span class="focus-border"></span>
+            <label [ngClass]="{ small_label: startProvince.value }"
+              >Start Province</label
+            >
+          </div>
+         
+        </div>
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-location-arrow"></i>
+            <input
+              class="vehicle_input"
+              disabled
+              value="{{mySchedule.destinationProvince}}"
+              #destiniProvince
+            />
+            <span class="focus-border"></span>
+            <label [ngClass]="{ small_label: destiniProvince.value }"
+              >Destination Province</label
+            >
+          </div>
+        </div>
+        <div class="inputBigContainer">
+          <div class="inputContainer">
+            <i class="form_icon fas fa-clock"></i>
+            <input
+              class="vehicle_input"
+              disabled
+              value="{{mySchedule.startTime | date: 'dd/MM/yyyy'}}"
+              #destiniProvince
+            />
+            <span class="focus-border"></span>
+            <label [ngClass]="{ small_label: destiniProvince.value }"
+              >Start Date</label
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      (click)="deleteSchedule()"
+      class="header_button cancleSchedule_Button"
+    >
+      Cancle
+    </button>
+  </div>
+</div>

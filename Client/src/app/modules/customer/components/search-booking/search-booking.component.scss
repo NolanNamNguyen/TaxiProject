@@ -1,0 +1,239 @@
+h3 {
+  margin: 0;
+}
+.searchBar_container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  width: 100%;
+}
+.login_form {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  background-color: white;
+  border-radius: 15px;
+  align-items: center;
+}
+.infoInput_container {
+  justify-content: space-between;
+  display: flex;
+  width: 70%;
+}
+.province_container {
+  width: 21%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.searchButton_container {
+  width: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.searchButton_container button {
+  border: none;
+  cursor: pointer;
+  background: none;
+  outline: none;
+}
+
+.searchButton_container i {
+  font-size: 22px;
+  color: rgb(123, 120, 128);
+  transition: all 0.5s ease-in-out;
+}
+
+.searchButton_container i:hover {
+  color: rgb(90, 40, 184);
+  transition: all 0.5s ease-in-out;
+}
+
+.login_input {
+  width: 100%;
+  border: 0;
+  padding: 4px 0;
+  border-bottom: 1px solid #ccc;
+  z-index: 1;
+  background-color: transparent;
+}
+.login_input:focus {
+  outline: none;
+}
+.login_input ~ .focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #b386ec;
+  transition: 0.4s;
+}
+.login_input:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+.login_input ~ label {
+  position: absolute;
+  font-size: 16px;
+  left: 0;
+  width: 100%;
+  top: 4px;
+  color: #aaa;
+  transition: 0.3s;
+  z-index: 0;
+  letter-spacing: 0.5px;
+}
+.login_input:focus ~ label,
+.login_input ~ .small_label {
+  top: -14px;
+  font-size: 12px;
+  color: #b386ec;
+  transition: 0.3s;
+}
+.inputContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+.reservations_container {
+  width: 22%;
+  display: flex;
+  align-items: center;
+}
+.form_icon {
+  position: absolute;
+  left: -17%;
+  top: 21%;
+  font-size: 20px;
+  color: rgba(75, 60, 88, 0.815);
+}
+.rating_Container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+}
+
+.rating_Container h3 {
+  padding-top: 5px;
+}
+.star-ratings {
+  width: 124px;
+  align-self: center;
+  unicode-bidi: bidi-override;
+  color: #ccc;
+  font-size: 64px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  .fill-ratings {
+    width: 0%;
+    color: #e7711b;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    font-size: 30px;
+
+    // Allows us to grab the width of the span elements
+    span {
+      display: inline-block;
+    }
+  }
+  .empty-ratings {
+    width: 100%;
+    display: block;
+    z-index: 0;
+    font-size: 30px;
+  }
+}
+.scheduleResult_container {
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  width: 80%;
+  background-color: white;
+  border-radius: 15px;
+  height: 182px;
+}
+.locationInformation_container {
+  width: 69%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.locateInfo {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.locateInfo h3 {
+  font-size: 15px;
+  width: 100%;
+  padding: 8px 10px;
+}
+.driverInfo_container {
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.scheduleAva_container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.scheduleAva_container img {
+  width: 100%;
+}
+.searchPage_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+.orderAction_container {
+  position: absolute;
+  right: 4%;
+  top: 41%;
+  width: 30px;
+}
+.orderScheduleButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+}
+.orderScheduleButton:hover {
+  background: rgb(101, 64, 185);
+  transition: all 0.4s ease-in;
+}
+.orderScheduleButton i {
+  font-size: 15px;
+  color: rgb(101, 64, 185);
+  transition: all 0.4s ease-in;
+}
+.orderScheduleButton:hover i {
+  color: white;
+  transition: all 0.4s ease-in;
+}
+
